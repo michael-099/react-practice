@@ -7,6 +7,9 @@ reactDOM.render(<div>
     {/* <h1 className="head">keeper app</h1> */}
     <Header /> 
     <Card title="tittle" content="hwlllo" />
+    <Card title="tittle" content="heloo" />
+    <Card title="tittle" content="hwlllo" />
+    <Card title="tittle" content="heloo" />
     <Footer className="footer" />
 
 </div>, document.getElementById("root")); 
