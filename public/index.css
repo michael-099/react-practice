@@ -5,6 +5,9 @@
     margin-top:0px;
     border-top:0px;
 } */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
     padding: 0;
     margin: 0;

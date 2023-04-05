@@ -68,3 +68,69 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Tailwind 
+install Tailwind CSS with Create React App
+Setting up Tailwind CSS in a Create React App project.
+
+Create React App does not support custom PostCSS configurations and is incompatible with many important tools in the PostCSS ecosystem, like `postcss-import`.
+
+We highly recommend using Vite, Parcel, Next.js, or Remix instead of Create React App. They provide an equivalent or better developer experience but with more flexibility, giving you more control over how Tailwind and PostCSS are configured.
+
+Create your project
+Start by creating a new React project with Create React App v5.0+ if you don't have one already set up.
+
+Terminal
+
+npx create-react-app my-project
+cd my-project
+Install Tailwind CSS
+Install tailwindcss via npm, and then run the init command to generate your tailwind.config.js file.
+
+Terminal
+
+npm install -D tailwindcss
+npx tailwindcss init
+Configure your template paths
+Add the paths to all of your template files in your tailwind.config.js file.
+
+tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+Add the Tailwind directives to your CSS
+Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+Start your build process
+Run your build process with npm run start.
+
+Terminal
+
+npm run start
+Start using Tailwind in your project
+Start using Tailwind’s utility classes to style your content.
+
+App.js
+
+export default function App() {
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
+}
