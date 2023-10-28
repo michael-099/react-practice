@@ -3,7 +3,7 @@ import reactDOM from 'react-dom';
 import Card from './components/card.jsx';
 import Header from './components/header.jsx';
 import Footer from './components/Footer.jsx';
-import Count from './components/count.jsx';
+import Count from './components/inceament/count.jsx';
 reactDOM.render(<div>
     {/* <h1 className="head">keeper app</h1> */}
     <Header /> 

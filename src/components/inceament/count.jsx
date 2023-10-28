@@ -1,11 +1,29 @@
 import React from "react";
 import { ReactDOM ,useState} from "react";
+import "./increment.css";
 
 function Count(props){
-    return <div className='card'>
-    <p>{props.title} </p>
-    
+    const [state,setState]=useState(0);
+
+    function increment(prevCount){
+      setState((prevCount)=>prevCount+1)}
+    function reset(prevCount){
+      setState((prevCount)=>prevCount=0)
+    }
+   
+      return (
+    <div className='card_i'>
+    <div className="b">
+    <p>{props.title} </p></div>
+    <div className="b"><p>{state}</p>
     </div>
+    <div className="b"><button onClick={increment}>increment</button>
+    <button onClick={reset}>reset</button>
+    </div>
+    
+     
+       </div>
+       )
 }
 export default Count ;
 // Here's a basic template for managing state in a React component using the useState hook:
@@ -32,19 +50,15 @@ export default Count ;
 
 // Certainly, let's break down the template and explain each part:
 
-// 1. Import Statements:
+// 1. Import Statements for necessary modules:
 // 
 //    import React, { useState } from 'react';
-//   
-//    - We import the necessary modules:
-//      - `React`: The core library for building React components.
+
 //      - `useState`: A hook from React that allows us to manage state within functional components.
 
 // 2. Functional Component**:
    
-//    function MyComponent() {
- 
-
+//    function MyComponent() {}
 //    - We define a functional component named `MyComponent`. You should replace `MyComponent` with your desired component name.
 
 // 3. State Initialization:
@@ -89,18 +103,20 @@ export default Count ;
 // This template provides a foundation for creating a React component with state management. You can customize it by specifying your component's name, initial state, and state update logic to suit your specific use case.
 
 
-// can we change color or style usign this ?
+// !!!!!!!!!!!!!!can we change color or style usign this ?!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 // Yes, you can change the color or style of elements in your React application using state management. State management in React allows you to dynamically update the styles and appearance of your components based on user interactions, data changes, or other conditions. Here's how you can do it:
 
-// 1. **Conditional Styling**: You can define different styles or CSS classes as part of your component's state. Then, based on specific conditions or user interactions, you can update the state to apply different styles or classes to your elements. For example, you can change the background color of a button when it's clicked.
+// 1. Conditional Styling: You can define different styles or CSS classes as part of your component's state. Then, based on specific conditions or user interactions, you can update the state to apply different styles or classes to your elements. For example, you can change the background color of a button when it's clicked.
 
-// 2. **Inline Styles**: React allows you to apply styles directly to elements using the `style` attribute. You can define a style object in your component's state and update it dynamically to change the appearance of elements. For instance, you can change the text color of a paragraph based on certain conditions.
+// 2. Inline Styles: React allows you to apply styles directly to elements using the `style` attribute. You can define a style object in your component's state and update it dynamically to change the appearance of elements. For instance, you can change the text color of a paragraph based on certain conditions.
 
-// 3. **Dynamic Class Names**: You can use class names that are determined by the component's state. This is useful when you have predefined CSS classes for different styles, and you toggle classes based on state changes.
+// 3. Dynamic Class Names: You can use class names that are determined by the component's state. This is useful when you have predefined CSS classes for different styles, and you toggle classes based on state changes.
 
 // Here's a simplified example of how you can change the background color of a `div` element using React state and conditional rendering:
 
-// ```jsx
+
 // import React, { useState } from 'react';
 
 // function App() {
@@ -125,11 +141,13 @@ export default Count ;
 // }
 
 // export default App;
-// ```
+
 
 // In this example, clicking the "Toggle Color" button changes the background color of the `div` based on the state `isHighlighted`. This demonstrates how you can dynamically change styles in a React component based on state changes or user interactions.
 
 
+
+// !!!!!!!!!!!!!!!!!!!!!
 // The code snippet `style={{ backgroundColor: isHighlighted ? 'yellow' : 'transparent' }}` is defining an inline style for a React element. Let me break it down for you:
 
 // 1. `style`: This is an attribute of a React element that allows you to apply inline CSS styles to that element.
