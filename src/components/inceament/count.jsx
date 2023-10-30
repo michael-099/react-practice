@@ -21,7 +21,7 @@ function Count(props){
     <button onClick={reset}>reset</button>
     </div>
     
-     
+   
        </div>
        )
 }
