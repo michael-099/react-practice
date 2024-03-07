@@ -7,13 +7,13 @@ import Count from './components/inceament/count.jsx';
 import Detail from './components/Hover/hover_Q.jsx';
 import "index.css";
 import App from "./App";
-import { store } from './app/store';
-import { provider } from 'react-redux';
+import { store } from './App/store';
+import { Provider } from 'react-redux';
 reactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <App />
         </Provider>
-    </React.StrictMode>
-
-    , document.getElementById("root")); 
+    </React.StrictMode>,
+    document.getElementById("root")
+); 
