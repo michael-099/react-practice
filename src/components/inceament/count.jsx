@@ -70,6 +70,16 @@ export default Count ;
 //    - `setState`: This function is used to update the state.
 //    - `initialState`: Replace this with the initial value for your state.
 
+// When we initialize the state using the useState hook in React, it returns an array with two elements: 
+// the current state value and
+// a function to update that state value.
+// We use array destructuring to assign these elements to variables with meaningful names,
+//  making it easier to work with state in our components. 
+//  This allows us to access the state value using one variable and the updater function using another, 
+//  providing a clear and concise way to manage state in functional components.
+
+
+
 // 4. State Change Function:
 //  
 //    const handleStateChange = (newValue) => {
