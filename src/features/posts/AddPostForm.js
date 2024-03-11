@@ -13,7 +13,7 @@ const AddPostForm = () => {
 
     // const users = useSelector(selectAllUsers)
 
-    const onTitleChanged = e => {setTitle(e.target.value)}
+    const onTitleChanged = e => setTitle(e.target.value)
     const onContentChanged = e => setContent(e.target.value)
     // const onAuthorChanged = e => setUserId(e.target.value)
     const onSavePostClicked = () => {
