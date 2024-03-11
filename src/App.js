@@ -1,9 +1,11 @@
 import React from "react";
 import { ReactDOM } from "react";
 import PostsList from "./features/posts/postsList";
+import  AddPostForm from "./features/posts/AddPostForm";
 function App() {
     return (
         <main className="App">
+            <AddPostForm/>
             <PostsList />
         </main>
     )
